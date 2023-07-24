@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/gakuto/workspace/github.com/gkanba/Numint/build",
+  "command": "/home/linuxbrew/.linuxbrew/bin/clang++  -I/home/gakuto/workspace/github.com/gkanba/Numint/include -Wall -Wextra -std=c++17 -o CMakeFiles/Numint.dir/src/Numint.cpp.o -c /home/gakuto/workspace/github.com/gkanba/Numint/src/Numint.cpp",
+  "file": "/home/gakuto/workspace/github.com/gkanba/Numint/src/Numint.cpp"
+},
+{
+  "directory": "/home/gakuto/workspace/github.com/gkanba/Numint/build",
+  "command": "/home/linuxbrew/.linuxbrew/bin/clang++  -I/home/gakuto/workspace/github.com/gkanba/Numint/include -Wall -Wextra -std=c++17 -o CMakeFiles/exec.dir/src/main.cpp.o -c /home/gakuto/workspace/github.com/gkanba/Numint/src/main.cpp",
+  "file": "/home/gakuto/workspace/github.com/gkanba/Numint/src/main.cpp"
+}
+]
