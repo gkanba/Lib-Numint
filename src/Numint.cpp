@@ -1,4 +1,4 @@
-#include "static/Numint.h"
+#include "Numint.h"
 #include <iostream>
 
 namespace Numint {
