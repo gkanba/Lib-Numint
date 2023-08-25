@@ -21,10 +21,18 @@ int TimeSeriesState::len() { return ptr->rows(); }
 
 double TimeSeriesState::step_width() { return width; }
 
+void TimeSeriesState::resize(const int size){
+    // Allocate new rows
+    ptr->conservativeResize(size, Eigen::NoChange);
+}
+
+void TimeSeriesState::set(const State state, int index){
+    // Insert new state (step, time, state[0], ... , state[N])
+    ptr->row(index) << state.timer.step, state.timer.time, state.state.transpose();
+}
+
 void TimeSeriesState::append(const State state)
 {
-    // Allocate new one row.
-    ptr->conservativeResize(len() + 1, Eigen::NoChange);
     // Insert new state (step, time, state[0], ... , state[N])
     ptr->bottomRows(1) << state.timer.step, state.timer.time, state.state.transpose();
 
@@ -37,14 +45,14 @@ State TimeSeriesState::state(const int index)
     Eigen::VectorXd sv;
     if(index >= 0){
         Eigen::VectorXd r = ptr->row(index);
-        Numint::Debug::PrintVectorObj("TEST", "r", r, Numint::Debug::IOFMT_STREAMPREC<1>);
+        //Numint::Debug::PrintVectorObj("TEST", "r", r, Numint::Debug::IOFMT_STREAMPREC<1>);
         ts = r[0];
         tt = r[1];
         sv = r.tail(dim());
     }
     else{
         Eigen::VectorXd r = ptr->row(len() + index);
-        Numint::Debug::PrintVectorObj("TEST", "r", r, Numint::Debug::IOFMT_STREAMPREC<1>);
+        //Numint::Debug::PrintVectorObj("TEST", "r", r, Numint::Debug::IOFMT_STREAMPREC<1>);
         ts = r[0];
         tt = r[1];
         sv = r.tail(dim());

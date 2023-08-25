@@ -1,13 +1,15 @@
 #include "Math/Integration.hpp"
 
+#include <iostream>
 #include "Debug/Logger.hpp"
 
 namespace Numint::Math{
 
 void integrate(Container::TimeSeriesState container, ODE& equation, const IntegrationMethod method, const int N){
     double dt = container.width;
-    for(int i = 0; i < N; i++){
-        Container::State current = container.state(-1);
+    container.resize(N);
+    for(int i = 0; i < N - 1; i++){
+        Container::State current = container.state(i);
         // Integrade forward (with a specified method)
         switch(method){
         case IntegrationMethod::Euler:
@@ -24,8 +26,12 @@ void integrate(Container::TimeSeriesState container, ODE& equation, const Integr
         // Forward step and time
         current.timer.step += 1;
         current.timer.time += dt;
-        container.append(current);
+        container.set(current, i + 1);
+        if(i % 1000 == 0){
+            std::cout << "Integration Completed : " << i << std::endl;
+        }
     }
+    std::cout << "Integration Done : " << N << std::endl;
 }
 
     

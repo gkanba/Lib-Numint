@@ -11,16 +11,18 @@ namespace Numint::Debug {
     template<int aligncols>
     static const Eigen::IOFormat IOFMT_STREAMPREC(Eigen::StreamPrecision, aligncols, ", ", "\n", "[", "]");
     template<int aligncols>
+    static const Eigen::IOFormat IOFMT_STREAMPREC_NOBRACE(Eigen::StreamPrecision, aligncols, ", ", "\n", "", "");
+    template<int aligncols>
     static const Eigen::IOFormat IOFMT_FULLPREC(Eigen::FullPrecision, aligncols, ", ", "\n", "[", "]");
 
-    void Info                (const char* invoker, const char* msg);
-    void Warning             (const char* invoker, const char* msg);
-    void Fatal               (const char* invoker, const char* msg);
-    void PrintVectorObj      (const char* invoker, const char* obj_name, Eigen::VectorXd obj, Eigen::IOFormat format);
-    void PrintMatrixObj      (const char* invoker, const char* obj_name, Eigen::MatrixXd obj, Eigen::IOFormat format);
+    void Info               (const char* invoker, const char* msg);
+    void Warning            (const char* invoker, const char* msg);
+    void Fatal              (const char* invoker, const char* msg);
+    void PrintVectorObj     (const char* invoker, const char* obj_name, Eigen::VectorXd obj, Eigen::IOFormat format);
+    void PrintMatrixObj     (const char* invoker, const char* obj_name, Eigen::MatrixXd obj, Eigen::IOFormat format);
 
-    void PrintState          (const char* invoker, const char* obj_name, Container::State state, Eigen::IOFormat format);
-
+    void PrintState         (const char* invoker, const char* obj_name, Container::State state, Eigen::IOFormat format);
+    void SaveMatrixObj      (const char* invoker, const char* obj_name, const char* file_name, Eigen::MatrixXd obj, Eigen::IOFormat format);
 }
 
 #endif

@@ -1,6 +1,7 @@
 #include "Debug/Logger.hpp"
 
 #include <iostream>
+#include <fstream>
 
 namespace Numint::Debug {
 
@@ -29,6 +30,19 @@ void PrintState (const char* invoker, const char* obj_name, Container::State sta
     std::cout << "Step : " << state.timer.step << std::endl;
     std::cout << "Time : " << state.timer.time << std::endl;
     std::cout << state.state.format(format) << std::endl;
+}
+
+void SaveMatrixObj(const char* invoker, const char* obj_name, const char* file_name, Eigen::MatrixXd obj, Eigen::IOFormat format){
+    std::cout << "[IO] [Numint->" << invoker << "] " << "Trying to save matrix object " << obj_name << " as " << file_name << std::endl;
+    std::ofstream stream(file_name);
+    if(stream.is_open()){
+        stream << obj.format(format) << std::endl;
+        std::cout << "[IO] [Numint->" << invoker << "] " << "Saved matrix object " << obj_name << " as " << file_name << std::endl;
+    }
+    else{
+        std::cout << "[IO] [Numint->" << invoker << "] " << "Unable to open file " << file_name << std::endl;
+        std::cout << "[IO] [Numint->" << invoker << "] " << "Failed to save matrix object " << obj_name << " as " << file_name << std::endl;
+    }
 }
 
 }

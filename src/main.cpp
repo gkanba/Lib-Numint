@@ -16,9 +16,9 @@ int main(int argc, char** argv) {
 
       Numint::Math::Lorenz63 l63fn = Numint::Math::Lorenz63(8.0/3.0, 28.0, 10.0);
 
-      Numint::Container::State state_A = Numint::Container::State(Numint::Container::Timer(0, 0.0), Eigen::VectorXd::Ones(3));
+      Numint::Container::State state_A = Numint::Container::State(Numint::Container::Timer(0, 0.0), Eigen::VectorXd::Ones(3) * 1.0);
       //Numint::Container::State state_ap = Numint::Container::State(Numint::Container::Timer(1, 0.01), Eigen::VectorXd::Ones(3));
-      Numint::Container::TimeSeriesState test = Numint::Container::TimeSeriesState(state_A, 0.01);
+      Numint::Container::TimeSeriesState test = Numint::Container::TimeSeriesState(state_A, 0.001);
       //test.append(state_ap);
       //Numint::Container::State state_B = test.state(-1);
 
@@ -26,9 +26,9 @@ int main(int argc, char** argv) {
       //Numint::Debug::PrintState("main-24", "state_B", state_B, Numint::Debug::IOFMT_STREAMPREC<1>);
 
       //Numint::Math::integrate(test, l63fn, Numint::Math::IntegrationMethod::Euler, 99);
-      Numint::Math::integrate(test, l63fn, Numint::Math::IntegrationMethod::RK4, 99);
+      Numint::Math::integrate(test, l63fn, Numint::Math::IntegrationMethod::Euler, 100000);
 
-      Numint::Debug::PrintMatrixObj("MAT", "MAT", *test.ptr, Numint::Debug::IOFMT_STREAMPREC<1>);
+      Numint::Debug::SaveMatrixObj("main", "test", "l63.tsd", *test.ptr, Numint::Debug::IOFMT_STREAMPREC_NOBRACE<1>);
 
       return 0;
 }

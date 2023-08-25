@@ -34,6 +34,8 @@ struct TimeSeriesState{
     int dim();
     int len();
     double step_width();
+    void resize(const int size);
+    void set(const State state, const int index);
     void append(const State state);
     State state(const int index);
 };
