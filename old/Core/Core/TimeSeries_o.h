@@ -1,6 +1,5 @@
 //    Numint - Cross Platform C++ Individual Numerical Computation Library with Eigen3.4 
-//    (https://gitlab.com/libeigen/eigen.git)
-//    Copyright 2023 Gakuto Kambayashi, and Contributors
+//    Copyright (C) 2023 Gakuto Kambayashi <gakutok.univ@gmail.com>
 //    All rights reserved.
 
 #ifndef _IG_TIMESERIES_H_

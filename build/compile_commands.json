@@ -1,12 +1,32 @@
 [
 {
   "directory": "/home/gakuto/workspace/github.com/gkanba/Numint/build",
-  "command": "/home/linuxbrew/.linuxbrew/bin/clang++  -I/home/gakuto/workspace/github.com/gkanba/Numint/include -Wall -Wextra -std=c++17 -o CMakeFiles/Numint.dir/src/Numint.cpp.o -c /home/gakuto/workspace/github.com/gkanba/Numint/src/Numint.cpp",
+  "command": "/home/linuxbrew/.linuxbrew/bin/clang++  -I/home/gakuto/workspace/github.com/gkanba/Numint/include -g -Wall -Wextra -std=c++17 -o CMakeFiles/Numint.dir/src/Numint.cpp.o -c /home/gakuto/workspace/github.com/gkanba/Numint/src/Numint.cpp",
   "file": "/home/gakuto/workspace/github.com/gkanba/Numint/src/Numint.cpp"
 },
 {
   "directory": "/home/gakuto/workspace/github.com/gkanba/Numint/build",
-  "command": "/home/linuxbrew/.linuxbrew/bin/clang++  -I/home/gakuto/workspace/github.com/gkanba/Numint/include -Wall -Wextra -std=c++17 -o CMakeFiles/exec.dir/src/main.cpp.o -c /home/gakuto/workspace/github.com/gkanba/Numint/src/main.cpp",
+  "command": "/home/linuxbrew/.linuxbrew/bin/clang++  -I/home/gakuto/workspace/github.com/gkanba/Numint/include -g -Wall -Wextra -std=c++17 -o CMakeFiles/Numint.dir/src/Container/TimeSeriesState.cpp.o -c /home/gakuto/workspace/github.com/gkanba/Numint/src/Container/TimeSeriesState.cpp",
+  "file": "/home/gakuto/workspace/github.com/gkanba/Numint/src/Container/TimeSeriesState.cpp"
+},
+{
+  "directory": "/home/gakuto/workspace/github.com/gkanba/Numint/build",
+  "command": "/home/linuxbrew/.linuxbrew/bin/clang++  -I/home/gakuto/workspace/github.com/gkanba/Numint/include -g -Wall -Wextra -std=c++17 -o CMakeFiles/Numint.dir/src/Math/Integration.cpp.o -c /home/gakuto/workspace/github.com/gkanba/Numint/src/Math/Integration.cpp",
+  "file": "/home/gakuto/workspace/github.com/gkanba/Numint/src/Math/Integration.cpp"
+},
+{
+  "directory": "/home/gakuto/workspace/github.com/gkanba/Numint/build",
+  "command": "/home/linuxbrew/.linuxbrew/bin/clang++  -I/home/gakuto/workspace/github.com/gkanba/Numint/include -g -Wall -Wextra -std=c++17 -o CMakeFiles/Numint.dir/src/Math/ODE.cpp.o -c /home/gakuto/workspace/github.com/gkanba/Numint/src/Math/ODE.cpp",
+  "file": "/home/gakuto/workspace/github.com/gkanba/Numint/src/Math/ODE.cpp"
+},
+{
+  "directory": "/home/gakuto/workspace/github.com/gkanba/Numint/build",
+  "command": "/home/linuxbrew/.linuxbrew/bin/clang++  -I/home/gakuto/workspace/github.com/gkanba/Numint/include -g -Wall -Wextra -std=c++17 -o CMakeFiles/Numint.dir/src/Debug/Logger.cpp.o -c /home/gakuto/workspace/github.com/gkanba/Numint/src/Debug/Logger.cpp",
+  "file": "/home/gakuto/workspace/github.com/gkanba/Numint/src/Debug/Logger.cpp"
+},
+{
+  "directory": "/home/gakuto/workspace/github.com/gkanba/Numint/build",
+  "command": "/home/linuxbrew/.linuxbrew/bin/clang++  -I/home/gakuto/workspace/github.com/gkanba/Numint/include -g -Wall -Wextra -std=c++17 -o CMakeFiles/exec.dir/src/main.cpp.o -c /home/gakuto/workspace/github.com/gkanba/Numint/src/main.cpp",
   "file": "/home/gakuto/workspace/github.com/gkanba/Numint/src/main.cpp"
 }
 ]

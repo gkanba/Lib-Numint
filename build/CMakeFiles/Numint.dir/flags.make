@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/gakuto/workspace/github.com/gkanba/Numint/include
 
-CXX_FLAGS = -Wall -Wextra -std=c++17
+CXX_FLAGS = -g -Wall -Wextra -std=c++17
 
