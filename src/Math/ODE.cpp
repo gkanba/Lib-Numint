@@ -17,4 +17,11 @@ Eigen::VectorXd Lorenz63::RHS(Eigen::VectorXd state, double t){
     return LHS;
 }
 
+Eigen::VectorXd VanDerPol::RHS(Eigen::VectorXd state, double t){
+    Eigen::VectorXd LHS = Eigen::VectorXd::Zero(2);
+    LHS(0) = m + (state(0) - (1.0 / 3.0) * std::pow(state(0), 3) - state(1));
+    LHS(1) = (1.0 / m) * state(0);
+    return LHS;
+}
+
 }

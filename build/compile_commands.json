@@ -21,6 +21,21 @@
 },
 {
   "directory": "/home/gakuto/workspace/github.com/gkanba/Numint/build",
+  "command": "/home/linuxbrew/.linuxbrew/bin/clang++  -I/home/gakuto/workspace/github.com/gkanba/Numint/include -g -Wall -Wextra -std=c++17 -o CMakeFiles/Numint.dir/src/Math/IteratedMap.cpp.o -c /home/gakuto/workspace/github.com/gkanba/Numint/src/Math/IteratedMap.cpp",
+  "file": "/home/gakuto/workspace/github.com/gkanba/Numint/src/Math/IteratedMap.cpp"
+},
+{
+  "directory": "/home/gakuto/workspace/github.com/gkanba/Numint/build",
+  "command": "/home/linuxbrew/.linuxbrew/bin/clang++  -I/home/gakuto/workspace/github.com/gkanba/Numint/include -g -Wall -Wextra -std=c++17 -o CMakeFiles/Numint.dir/src/Math/Random.cpp.o -c /home/gakuto/workspace/github.com/gkanba/Numint/src/Math/Random.cpp",
+  "file": "/home/gakuto/workspace/github.com/gkanba/Numint/src/Math/Random.cpp"
+},
+{
+  "directory": "/home/gakuto/workspace/github.com/gkanba/Numint/build",
+  "command": "/home/linuxbrew/.linuxbrew/bin/clang++  -I/home/gakuto/workspace/github.com/gkanba/Numint/include -g -Wall -Wextra -std=c++17 -o CMakeFiles/Numint.dir/src/Math/DA.cpp.o -c /home/gakuto/workspace/github.com/gkanba/Numint/src/Math/DA.cpp",
+  "file": "/home/gakuto/workspace/github.com/gkanba/Numint/src/Math/DA.cpp"
+},
+{
+  "directory": "/home/gakuto/workspace/github.com/gkanba/Numint/build",
   "command": "/home/linuxbrew/.linuxbrew/bin/clang++  -I/home/gakuto/workspace/github.com/gkanba/Numint/include -g -Wall -Wextra -std=c++17 -o CMakeFiles/Numint.dir/src/Debug/Logger.cpp.o -c /home/gakuto/workspace/github.com/gkanba/Numint/src/Debug/Logger.cpp",
   "file": "/home/gakuto/workspace/github.com/gkanba/Numint/src/Debug/Logger.cpp"
 },

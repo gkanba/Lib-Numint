@@ -37,6 +37,8 @@ struct TimeSeriesState{
     void resize(const int size);
     void set(const State state, const int index);
     void append(const State state);
+    void add_normalnoise(const Eigen::VectorXd mean, Eigen::VectorXd var);
+    TimeSeriesState error_euclid(TimeSeriesState target);
     State state(const int index);
 };
 

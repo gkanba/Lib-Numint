@@ -2,12 +2,15 @@ cmake_minimum_required(VERSION 3.20)
 
 project(Numint CXX)
 
-add_compile_options(-Wall -Wextra -std=c++17)
+add_compile_options(-Wall -Wextra  -std=c++17)
 
 set(SRCFILES    src/Numint.cpp
                 src/Container/TimeSeriesState.cpp
                 src/Math/Integration.cpp
                 src/Math/ODE.cpp
+                src/Math/IteratedMap.cpp
+                src/Math/Random.cpp
+                src/Math/DA.cpp
                 src/Debug/Logger.cpp)
 
 add_library(Numint STATIC ${SRCFILES})

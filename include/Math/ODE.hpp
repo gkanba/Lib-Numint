@@ -11,8 +11,6 @@ public:
     virtual Eigen::VectorXd RHS(Eigen::VectorXd state, double t);
 };
 
-
-
 class Lorenz63 : public ODE{
 
 private:
@@ -24,6 +22,16 @@ public:
     Lorenz63(double beta, double rho, double sigma) : b(beta), r(rho), s(sigma) {};
     Eigen::VectorXd RHS(Eigen::VectorXd state, double t);
 
+};
+
+class VanDerPol : public ODE{
+
+private:
+    double m;
+public:
+    VanDerPol() = default;
+    VanDerPol(double mu) : m(mu) {};
+    Eigen::VectorXd RHS(Eigen::VectorXd state, double t);
 };
 
 }
