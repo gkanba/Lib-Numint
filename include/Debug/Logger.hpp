@@ -20,7 +20,6 @@ namespace Numint::Debug {
     void Fatal              (const char* invoker, const char* msg);
     void PrintVectorObj     (const char* invoker, const char* obj_name, Eigen::VectorXd obj, Eigen::IOFormat format);
     void PrintMatrixObj     (const char* invoker, const char* obj_name, Eigen::MatrixXd obj, Eigen::IOFormat format);
-
     void PrintState         (const char* invoker, const char* obj_name, Container::State state, Eigen::IOFormat format);
     void SaveMatrixObj      (const char* invoker, const char* obj_name, const char* file_name, Eigen::MatrixXd obj, Eigen::IOFormat format);
 }

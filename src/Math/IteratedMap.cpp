@@ -10,6 +10,10 @@ Eigen::VectorXd IteratedMap::next(Eigen::VectorXd state){
     return Eigen::VectorXd::Zero(1);
 }
 
+const char* IteratedMap::name(){
+    return "";
+}
+
 Eigen::MatrixXd ExampleLinearMap::Matrix(){
     Eigen::MatrixXd A(2, 2);
     A << 0.0, 1.0, -1.0, 0;
@@ -22,6 +26,10 @@ Eigen::VectorXd ExampleLinearMap::next(Eigen::VectorXd state){
     return LHS;
 }
 
+const char* ExampleLinearMap::name(){
+    return "Example Linear Map";
+}
+
 Eigen::MatrixXd ExampleLinearMapSome::Matrix(){
     Eigen::MatrixXd A(2, 2);
     A << 1.0, 2.0, -1.0, 3.0;
@@ -32,6 +40,10 @@ Eigen::VectorXd ExampleLinearMapSome::next(Eigen::VectorXd state){
     Eigen::VectorXd LHS = Eigen::VectorXd::Zero(2);
     LHS = Matrix() * state;
     return LHS;
+}
+
+const char* ExampleLinearMapSome::name(){
+    return "Example Linear Map Some";
 }
 
 }

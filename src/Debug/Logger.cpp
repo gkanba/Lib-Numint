@@ -27,8 +27,8 @@ void PrintMatrixObj (const char* invoker, const char* obj_name, Eigen::MatrixXd 
 
 void PrintState (const char* invoker, const char* obj_name, Container::State state, Eigen::IOFormat format){
     std::cout << "[STATE] [Numint->" << invoker << "] " << obj_name << " =" << std::endl;
-    std::cout << "Step : " << state.timer.step << std::endl;
-    std::cout << "Time : " << state.timer.time << std::endl;
+    std::cout << "Step : " << state.step << std::endl;
+    std::cout << "Time : " << state.time << std::endl;
     std::cout << state.state.format(format) << std::endl;
 }
 

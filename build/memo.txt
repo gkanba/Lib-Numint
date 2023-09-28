@@ -1,0 +1,64 @@
+#include <iostream>
+#include <functional>
+
+template <typename T>
+struct Variable{
+    virtual T value() = 0;
+    virtual T value(double time) = 0;
+};
+
+template <typename T>
+struct TimeVariantVariable : public Variable<T>{
+private:
+    std::function<T(double)> eq;
+public:
+    TimeVariantVariable(const std::function<T(double)> equation) : eq(equation) {}
+    T value(){
+        return eq(0.0);
+    }
+    T value(double time){
+        return eq(time);
+    }
+};
+
+template <typename T>
+struct TimeInvariantVariable : public Variable<T>{
+private:
+    T c;
+public:
+    TimeInvariantVariable(const T constant) : c(constant) {}
+    T value(){
+        return c;
+    }
+    T value(double time){
+        return c;
+    }
+};
+
+void show(TimeVariantVariable<double> tv, double t){
+    std::cout << tv.value(t) << std::endl;
+}
+
+void show(TimeInvariantVariable<double> tiv){
+    std::cout << tiv.value() << std::endl;
+}
+
+double test1(double t){
+    return 1 * t;
+}
+
+double test2(double t){
+    return 2 * t;
+}
+
+int main() {
+    TimeVariantVariable<double>     v1 = TimeVariantVariable<double>(test1);
+    TimeVariantVariable<double>     v2 = TimeVariantVariable<double>(test2);
+    TimeInvariantVariable<double>   v3 = TimeInvariantVariable<double>(10.0);
+    
+    show(v1, 3.0);
+    show(v2, 3.0);
+    show(v3);
+    
+    return 0;
+}

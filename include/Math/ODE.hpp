@@ -9,6 +9,7 @@ class ODE{
 public:
     ODE();
     virtual Eigen::VectorXd RHS(Eigen::VectorXd state, double t);
+    virtual const char* name();
 };
 
 class Lorenz63 : public ODE{
@@ -21,6 +22,7 @@ public:
     Lorenz63() = default;
     Lorenz63(double beta, double rho, double sigma) : b(beta), r(rho), s(sigma) {};
     Eigen::VectorXd RHS(Eigen::VectorXd state, double t);
+    const char* name();
 
 };
 
@@ -32,6 +34,7 @@ public:
     VanDerPol() = default;
     VanDerPol(double mu) : m(mu) {};
     Eigen::VectorXd RHS(Eigen::VectorXd state, double t);
+    const char* name();
 };
 
 }
